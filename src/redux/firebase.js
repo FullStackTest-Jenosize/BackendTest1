@@ -1,7 +1,6 @@
 //กำหนดค่าของ Firebase
-import firebase from "firebase/app"
-import "firebase/auth"
-
+import firebase from "firebase/app";
+import "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCim7jA4u2sTakuINxrzHD_zgoQgTmEZfA",
@@ -11,12 +10,14 @@ const firebaseConfig = {
     messagingSenderId: "589017568743",
     appId: "1:589017568743:web:5deb517a4e51e0a1219942",
     measurementId: "G-NCCE8RP318"
-    };
+  };
 
+  if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
+  }
 
     const auth = firebase.auth();
-    const googleAuthProvider = new firebase.auth.googleAuthProvider();
-    const facebookAuthProvider = new firebase.auth.facebookAuthProvider();
+    const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+    const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
     
-    export {auth, googleAuthProvider, facebookAuthProvider}
+    export {auth,googleAuthProvider, facebookAuthProvider}
