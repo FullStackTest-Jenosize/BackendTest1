@@ -5,6 +5,7 @@ import { setUser, logoutInitiate } from "../redux/action";
 import { auth } from "../redux/firebase";
 import UserRoute from "../components/UserRoute";
 import styles from "../styles/home.module.css";
+import Link from "next/link";
 
 const HomePage = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -28,18 +29,24 @@ const HomePage = () => {
   };
 
   return (
-    <div> 
-        <UserRoute>
-          <div className={styles.title}>
-            <h2>Welcome</h2>
-          </div>
-          
-          <div className={styles.button_logout}>
-            <button className="btn btn-danger" onClick={handleAuth}>
+    <div>
+      <UserRoute>
+        <div className={styles.title}>
+          <h2>Welcome</h2>
+        </div>
+
+        <div className={styles.button_game24}>
+          <Link href="/game24" className={styles.button_24}>
+            <span className="text">Game24</span>
+          </Link>
+        </div>
+
+        <div className={styles.button_logout}>
+          <button className="btn btn-danger" onClick={handleAuth}>
             Logout
-            </button>
-          </div>
-        </UserRoute> 
+          </button>
+        </div>
+      </UserRoute>
     </div>
   );
 };

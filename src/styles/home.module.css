@@ -9,7 +9,65 @@
 .button_logout{
   margin: 0;
   position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button_game24{
+  margin: 0;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.button_24 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button_24:active,
+.button_24:hover {
+  outline: 0;
+}
+
+.button_24 span {
+  background-color: rgb(5, 6, 45);
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button_24:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button_24 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
