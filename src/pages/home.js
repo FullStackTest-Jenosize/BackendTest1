@@ -41,6 +41,12 @@ const HomePage = () => {
           </Link>
         </div>
 
+        <div className={styles.button_restuarants}>
+          <Link href="/restaurants" className={styles.button_24}>
+            <span className="text">Restaurants API</span>
+          </Link>
+        </div>
+
         <div className={styles.button_logout}>
           <button className="btn btn-danger" onClick={handleAuth}>
             Logout
