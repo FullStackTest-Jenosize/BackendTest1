@@ -45,7 +45,7 @@ app.prepare().then(() => {
     
       res.json(data); // ส่งผลลัพธ์กลับเป็น JSON
     } catch (error) {
-      res.status(500).json({ error: 'เกิดข้อผิดพลาดในการดึงข้อมูล' });
+      res.status(500).json({ error: error.message });
     }
   });
 
