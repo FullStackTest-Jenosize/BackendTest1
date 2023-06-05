@@ -1,6 +1,6 @@
 const express = require('express');
 const next = require('next');
-const jenosizeController = require('../../controller/jenosize');
+const jenosizeController = require('./src/controller/jenosize');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
