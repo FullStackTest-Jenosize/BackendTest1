@@ -25,10 +25,10 @@ export default function Home() {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `/api/restaurants?query=${encodeURIComponent(query)}`
+        `https://api-backend-five.vercel.app/api/restaurants?query=${encodeURIComponent(query)}`
       );
       setResults(response.data);
-      console.log(`/api/restaurants?query=${encodeURIComponent(query)}`);
+      console.log(`https://api-backend-five.vercel.app/api/restaurants?query=${encodeURIComponent(query)}`);
       console.log(JSON.stringify(results, null, 3));
     } catch (error) {
       console.error(error);

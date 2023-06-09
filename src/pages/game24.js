@@ -34,7 +34,7 @@ export default function Game24() {
     event.preventDefault();
 
     try {
-      const response = await axios.post("/api/game24", {
+      const response = await axios.post("https://api-backend-five.vercel.app/api/game24", {
         numbers: numbers.split(""),
       });
       setResult(response.data.result);
